@@ -1,4 +1,4 @@
-module fabric-sdk-go
+module github.com/feng081212/fabric-sdk-go
 
 go 1.17
 
@@ -9,6 +9,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
 	google.golang.org/grpc v1.23.0
+	//
 )
 
 require (
