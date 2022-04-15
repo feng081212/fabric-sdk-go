@@ -24,7 +24,7 @@ import (
 
 	"strings"
 
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	pb "github.com/feng081212/fabric-protos-go/peer"
 )
 
 // Descriptor ...

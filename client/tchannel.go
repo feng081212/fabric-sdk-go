@@ -2,7 +2,7 @@ package client
 
 import (
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/common"
 	"github.com/pkg/errors"
 	"math"
 )

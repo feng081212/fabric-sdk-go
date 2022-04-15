@@ -18,9 +18,9 @@ import (
 	"compress/gzip"
 	"encoding/json"
 	"fmt"
+	"github.com/feng081212/fabric-protos-go/peer"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
 	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms"
-	"github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/pkg/errors"
 	"regexp"
 )

@@ -15,8 +15,8 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/json"
+	"github.com/feng081212/fabric-protos-go/peer"
 	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/util"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/pkg/errors"
 	"os"
 )
@@ -26,7 +26,7 @@ type Platform struct{}
 
 // Name returns the name of this platform.
 func (p *Platform) Name() string {
-	return pb.ChaincodeSpec_EXTERNAL.String()
+	return peer.ChaincodeSpec_EXTERNAL.String()
 }
 
 // ValidatePath is used to ensure that path provided points to something that

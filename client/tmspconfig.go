@@ -6,7 +6,7 @@ import (
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/sw"
 	"github.com/feng081212/fabric-sdk-go/fabric/crypto/certs"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/feng081212/fabric-protos-go/msp"
 )
 
 type OUIdentifier struct {

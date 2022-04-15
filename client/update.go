@@ -19,7 +19,7 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/common"
 )
 
 func computePoliciesMapUpdate(original, updated map[string]*common.ConfigPolicy) (readSet, writeSet, sameSet map[string]*common.ConfigPolicy, updatedMembers bool) {

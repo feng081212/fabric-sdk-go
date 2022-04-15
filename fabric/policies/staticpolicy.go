@@ -2,8 +2,8 @@ package policies
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/feng081212/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/msp"
 )
 
 // AcceptAllPolicy always evaluates to true

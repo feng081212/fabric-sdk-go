@@ -4,7 +4,7 @@ import (
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/feng081212/fabric-protos-go/msp"
 	"github.com/pkg/errors"
 	"hash"
 )

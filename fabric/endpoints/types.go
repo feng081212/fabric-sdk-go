@@ -1,7 +1,7 @@
 package endpoints
 
 import (
-	"github.com/hyperledger/fabric-protos-go/peer"
+	"github.com/feng081212/fabric-protos-go/peer"
 )
 
 // ChaincodeInvokeRequest contains the parameters for sending a transaction proposal.

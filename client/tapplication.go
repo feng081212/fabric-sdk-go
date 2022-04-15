@@ -1,8 +1,8 @@
 package client
 
 import (
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/peer"
+	"github.com/feng081212/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/peer"
 	"github.com/pkg/errors"
 )
 

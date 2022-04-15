@@ -3,7 +3,7 @@ package client
 import (
 	"crypto/rand"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/common"
 	"github.com/pkg/errors"
 )
 

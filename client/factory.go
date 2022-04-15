@@ -2,11 +2,11 @@ package client
 
 import (
 	"crypto/ecdsa"
+	"github.com/feng081212/fabric-protos-go/common"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/ecdsas"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/factory"
 	"github.com/feng081212/fabric-sdk-go/fabric/crypto/certs"
 	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
-	"github.com/hyperledger/fabric-protos-go/common"
 )
 
 func GetPeer(mspID, serviceName, url, caCertificate string) *endpoints.Peer {

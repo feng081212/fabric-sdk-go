@@ -24,8 +24,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/hyperledger/fabric-protos-go/common"
-	ab "github.com/hyperledger/fabric-protos-go/orderer"
+	"github.com/feng081212/fabric-protos-go/common"
+	ab "github.com/feng081212/fabric-protos-go/orderer"
 )
 
 // A SignedEnvelope can can be sent to an orderer for broadcasting

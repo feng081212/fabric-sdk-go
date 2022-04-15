@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/hyperledger/fabric-protos-go/peer"
+	"github.com/feng081212/fabric-protos-go/peer"
 	"hash"
 )
 

@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/base64"
 	"encoding/json"
+	"github.com/feng081212/fabric-protos-go/peer"
 	"github.com/feng081212/fabric-sdk-go/client"
 	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/ccpackager/lifecycle"
 	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -313,7 +313,7 @@ func TestInstallScc(t *testing.T) {
 
 	desc := &lifecycle.Descriptor{
 		//Path:  "/Users/jianfengjin/workspace/fabric/workspaces/chaincode/chaincode-pkg/connection.json",
-		Type:  pb.ChaincodeSpec_EXTERNAL,
+		Type:  peer.ChaincodeSpec_EXTERNAL,
 		Label: "scc",
 		Value: mapV,
 	}

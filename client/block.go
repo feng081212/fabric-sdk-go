@@ -3,7 +3,7 @@ package client
 import (
 	"bytes"
 	"crypto/sha256"
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/feng081212/fabric-protos-go/common"
 )
 
 func CreateGenesisBlock(channelID string, configGroup *common.ConfigGroup) (*common.Block, error) {
