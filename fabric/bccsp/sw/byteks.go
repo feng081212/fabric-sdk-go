@@ -10,9 +10,9 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"errors"
+	"fmt"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/ecdsas"
-	"fmt"
 )
 
 // NewByteKeyStore instantiated  env key store at envs.

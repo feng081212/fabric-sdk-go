@@ -21,8 +21,8 @@ package ecdsas
 
 import (
 	"crypto/ecdsa"
-	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 type EcdsaPrivateKeyVerifier struct{}

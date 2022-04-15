@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package modlog
 
 import (
-	"github.com/feng081212/fabric-sdk-go/common/logger/api"
-	metadata2 "github.com/feng081212/fabric-sdk-go/common/logger/metadata"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/common/logger/api"
+	"github.com/feng081212/fabric-sdk-go/common/logger/metadata"
 	"io"
 	"log"
 	"os"
@@ -21,8 +21,8 @@ import (
 )
 
 var rwmutex = &sync.RWMutex{}
-var moduleLevels = &metadata2.ModuleLevels{}
-var callerInfos = &metadata2.CallerInfo{}
+var moduleLevels = &metadata.ModuleLevels{}
+var callerInfos = &metadata.CallerInfo{}
 var useCustomLogger int32
 
 // default logger factory singleton
@@ -390,7 +390,7 @@ func (l *Log) ChangeOutput(output io.Writer) {
 
 func (l *Log) logf(opts *loggerOpts, level api.Level, format string, args ...interface{}) {
 	//Format prefix to show function name and log level and to indicate that timezone used is UTC
-	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata2.ParseString(level))
+	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata.ParseString(level))
 	err := l.deflogger.Output(2, customPrefix+fmt.Sprintf(format, args...))
 	if err != nil {
 		fmt.Printf("error from deflogger.Output %v\n", err)
@@ -399,7 +399,7 @@ func (l *Log) logf(opts *loggerOpts, level api.Level, format string, args ...int
 
 func (l *Log) log(opts *loggerOpts, level api.Level, args ...interface{}) {
 	//Format prefix to show function name and log level and to indicate that timezone used is UTC
-	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata2.ParseString(level))
+	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata.ParseString(level))
 	err := l.deflogger.Output(2, customPrefix+fmt.Sprint(args...))
 	if err != nil {
 		fmt.Printf("error from deflogger.Output %v\n", err)
@@ -408,7 +408,7 @@ func (l *Log) log(opts *loggerOpts, level api.Level, args ...interface{}) {
 
 func (l *Log) logln(opts *loggerOpts, level api.Level, args ...interface{}) {
 	//Format prefix to show function name and log level and to indicate that timezone used is UTC
-	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata2.ParseString(level))
+	customPrefix := fmt.Sprintf(logLevelFormatter, l.getCallerInfo(opts), metadata.ParseString(level))
 	err := l.deflogger.Output(2, customPrefix+fmt.Sprintln(args...))
 	if err != nil {
 		fmt.Printf("error from deflogger.Output %v\n", err)

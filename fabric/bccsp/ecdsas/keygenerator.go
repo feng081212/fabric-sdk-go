@@ -4,8 +4,8 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
-	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 type EcdsaKeyGenerator struct {

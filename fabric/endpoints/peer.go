@@ -44,8 +44,8 @@ type Peer struct {
 	timeout         time.Duration
 	grpcOpts        []grpc.DialOption
 	tlsCaCerts      *x509.CertPool
-	tlsClientCerts []tls.Certificate
-	retryOpts      retry2.Opts
+	tlsClientCerts  []tls.Certificate
+	retryOpts       retry2.Opts
 }
 
 // MSPID gets the Peer mspID.

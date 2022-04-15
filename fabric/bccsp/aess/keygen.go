@@ -21,8 +21,8 @@ Please review third_party pinning scripts and patches for more details.
 package aess
 
 import (
-	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 func NewAesKeyGenerator(length int) *AesKeyGenerator {

@@ -12,8 +12,8 @@ package ccmetadata
 
 import (
 	"encoding/json"
-	flogging "github.com/feng081212/fabric-sdk-go/common/logger"
 	"fmt"
+	flogging "github.com/feng081212/fabric-sdk-go/common/logger"
 	"path/filepath"
 	"reflect"
 	"regexp"

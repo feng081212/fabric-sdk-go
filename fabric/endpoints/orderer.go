@@ -45,8 +45,8 @@ type Orderer struct {
 	failFast        bool
 	allowInsecure   bool
 	tlsCaCerts      *x509.CertPool
-	tlsClientCerts []tls.Certificate
-	retryOpts      retry2.Opts
+	tlsClientCerts  []tls.Certificate
+	retryOpts       retry2.Opts
 }
 
 func (o *Orderer) GetTlsClientCerts() []tls.Certificate {

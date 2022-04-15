@@ -13,8 +13,8 @@ SPDX-License-Identifier: Apache-2.0
 package status
 
 import (
-	"github.com/feng081212/fabric-sdk-go/fabric/errors/multi"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/errors/multi"
 
 	"github.com/pkg/errors"
 

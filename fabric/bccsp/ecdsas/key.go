@@ -26,8 +26,8 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
-	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 func NewEcdsaPrivateKey(key *ecdsa.PrivateKey, exportable bool) *EcdsaPrivateKey {

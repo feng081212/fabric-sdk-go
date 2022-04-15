@@ -14,9 +14,9 @@ import (
 	"archive/tar"
 	"bytes"
 	"compress/gzip"
+	"fmt"
 	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/ccmetadata"
 	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/util"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"os"
@@ -426,7 +426,6 @@ func validateMetadata(name, path string) error {
 
 	return nil
 }
-
 
 // dist holds go "distribution" information. The full list of distributions can
 // be obtained with `go tool dist list.

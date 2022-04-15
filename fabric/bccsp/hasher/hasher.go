@@ -68,6 +68,6 @@ func Hash(hashFunc func() hash.Hash, msg []byte) []byte {
 	return h.Sum(nil)
 }
 
-func HashBySha256(msg []byte) []byte  {
+func HashBySha256(msg []byte) []byte {
 	return Hash(sha256.New, msg)
 }

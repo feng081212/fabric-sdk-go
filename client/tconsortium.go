@@ -1,9 +1,9 @@
 package client
 
 import (
+	"fmt"
 	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
 	"github.com/feng081212/fabric-sdk-go/fabric/policies"
-	"fmt"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/pkg/errors"
 	"math"

@@ -1,8 +1,8 @@
 package endpoints
 
 import (
-	status2 "github.com/feng081212/fabric-sdk-go/fabric/errors/status"
 	"fmt"
+	status2 "github.com/feng081212/fabric-sdk-go/fabric/errors/status"
 )
 
 func ParseGrpcError(e error, g status2.Group, message ...string) error {

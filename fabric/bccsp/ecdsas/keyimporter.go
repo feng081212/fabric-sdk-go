@@ -3,8 +3,8 @@ package ecdsas
 import (
 	"crypto/ecdsa"
 	"crypto/x509"
-	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"github.com/pkg/errors"
 )
 

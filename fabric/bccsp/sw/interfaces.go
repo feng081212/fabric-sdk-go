@@ -62,4 +62,3 @@ type Verifier interface {
 	// The opts argument should be appropriate for the algorithm used.
 	Verify(k bccsp.Key, signature, digest []byte, opts bccsp.SignerOpts) (valid bool, err error)
 }
-
