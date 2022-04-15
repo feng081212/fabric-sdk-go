@@ -82,7 +82,7 @@ func (p *PeersClient) process(ctx context.Context, channelID string, request *en
 		}
 
 		if r.Response.Status < 200 || r.Response.Status >= 400 {
-			logger.Debugf("proposal response was not successful, error code %d, msg %s", r.Response.Status, r.Response.Message)
+			//logger.Debugf("proposal response was not successful, error code %d, msg %s", r.Response.Status, r.Response.Message)
 			continue
 		}
 
@@ -169,7 +169,7 @@ func (p *PeersClient) SendProposal(ctx context.Context, proposal *peer.Proposal)
 			responses[index], errs[index] = peer.ProcessTransactionProposal(ctx, request)
 
 			if errs[index] != nil {
-				logger.Debugf("Received error response from txn proposal processing: %s", err)
+				//logger.Debugf("Received error response from txn proposal processing: %s", err)
 			}
 		}(i, p)
 	}
