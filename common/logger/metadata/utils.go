@@ -8,7 +8,7 @@ package metadata
 
 import (
 	"errors"
-	"fabric-sdk-go/common/logger/api"
+	"github.com/feng081212/fabric-sdk-go/common/logger/api"
 	"strings"
 )
 

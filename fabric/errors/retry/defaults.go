@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package retry
 
 import (
-	status2 "fabric-sdk-go/fabric/errors/status"
+	status2 "github.com/feng081212/fabric-sdk-go/fabric/errors/status"
 	"time"
 
 	"github.com/hyperledger/fabric-protos-go/common"
@@ -94,7 +94,7 @@ var DefaultRetryableCodes = map[status2.Group][]status2.Code{
 }
 
 // ResMgmtDefaultRetryableCodes are the suggested codes that should be treated as
-// transient by fabric-sdk-go/pkg/client/resmgmt.Client
+// transient by github.com/feng081212/fabric-sdk-go/pkg/client/resmgmt.Client
 var ResMgmtDefaultRetryableCodes = map[status2.Group][]status2.Code{
 	status2.EndorserClientStatus: {
 		status2.ConnectionFailed,
@@ -125,7 +125,7 @@ var ResMgmtDefaultRetryableCodes = map[status2.Group][]status2.Code{
 }
 
 // ChannelClientRetryableCodes are the suggested codes that should be treated as
-// transient by fabric-sdk-go/pkg/client/channel.Client
+// transient by github.com/feng081212/fabric-sdk-go/pkg/client/channel.Client
 var ChannelClientRetryableCodes = map[status2.Group][]status2.Code{
 	status2.EndorserClientStatus: {
 		status2.ConnectionFailed, status2.EndorsementMismatch,

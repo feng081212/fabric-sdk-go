@@ -2,7 +2,7 @@ package ecdsas
 
 import (
 	"crypto/ecdsa"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
 	"github.com/pkg/errors"
 	"math/big"

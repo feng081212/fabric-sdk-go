@@ -2,10 +2,11 @@ package main
 
 import (
 	"bytes"
+	"encoding/base64"
 	"encoding/json"
-	"fabric-sdk-go/client"
-	"fabric-sdk-go/fabric/chaincode/ccpackager/lifecycle"
-	"fabric-sdk-go/fabric/endpoints"
+	"github.com/feng081212/fabric-sdk-go/client"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/ccpackager/lifecycle"
+	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"io/ioutil"
 	"os"
@@ -126,7 +127,7 @@ func TestCreateChannel(t *testing.T) {
 
 	zctOrganization := GetZctOrganization()
 
-	ch := client.DefaultChannel("zcl", "kfc")
+	ch := client.DefaultChannel("zcl", "chan")
 	ch.AddPolicy("Readers", "ANY Readers")
 	ch.AddPolicy("Writers", "ANY Writers")
 	ch.AddPolicy("Admins", "ANY Admins")
@@ -153,7 +154,7 @@ func TestOrgJoinChannel(t *testing.T) {
 
 	zctOrganization := GetZctOrganization()
 
-	res, err := GetOrdererClientForZcy().AddOrganizationalToChannel("kfc", zctOrganization)
+	res, err := GetOrdererClientForZcy().AddOrganizationalToChannel("chan", zctOrganization)
 	if err != nil {
 		panic(err)
 	}
@@ -302,7 +303,6 @@ func TestAddOrgToConsortium(t *testing.T) {
 	fmt.Println(res)
 }
 
-
 func TestInstallScc(t *testing.T) {
 
 	mapV := make(map[string]interface{})
@@ -348,6 +348,12 @@ func TestGetInstalledCC(t *testing.T) {
 		panic(err)
 	}
 	fmt.Println(resp)
+
+	b, err := json.MarshalIndent(resp, "", "\t")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(b))
 }
 
 func TestApproveChainCode(t *testing.T) {
@@ -355,14 +361,14 @@ func TestApproveChainCode(t *testing.T) {
 	request := &client.ApproveChaincodeRequest{
 		Name:            "scc",
 		Version:         "1",
-		PackageID:       "mycc:ca4b1870736ec98757cc0cb5827bae23a470cf675c0308518d4c49e3a146bef6",
-		Sequence:        3,
-		SignaturePolicy: "AND('zcm.admin')",
+		PackageID:       "scc:913bf4652697766a54cdb13fef398d8f0763f615f0139004104783186d9f7b73",
+		Sequence:        2,
+		SignaturePolicy: "AND('zcy.peer')",
 		//EndorsementPlugin: "escc",
 		//ValidationPlugin:  "vscc",
 		//InitRequired:      true,
 	}
-	resp, err := GetZcmPeerClient().ApproveChainCode("kfc", request, GetOrdererClientForZcm())
+	resp, err := GetZcyPeerClient().ApproveChainCode("kfc", request, GetOrdererClientForZcy())
 	if err != nil {
 		panic(err)
 	}
@@ -383,11 +389,11 @@ func TestQueryApprovedChaincodeDefinition(t *testing.T) {
 }
 
 func TestCheckCommitReadiness(t *testing.T) {
-	resp, err := GetZctPeerClient().CheckCommitReadiness("kfc", &client.CheckChaincodeCommitReadinessRequest{
+	resp, err := GetZcyPeerClient().CheckCommitReadiness("kfc", &client.CheckChaincodeCommitReadinessRequest{
 		Name:            "scc",
 		Sequence:        1,
 		Version:         "1",
-		SignaturePolicy: "AND('zcm.peer')",
+		SignaturePolicy: "AND('zcy.admin')",
 	})
 	if err != nil {
 		panic(err)
@@ -404,9 +410,9 @@ func TestCheckCommitReadiness(t *testing.T) {
 func TestCommitChainCode(t *testing.T) {
 	resp, err := GetPeersClient().CommitChainCode("kfc", &client.CommitChaincodeRequest{
 		Name:            "scc",
-		Sequence:        3,
+		Sequence:        2,
 		Version:         "1",
-		SignaturePolicy: "AND('zcm.admin')",
+		SignaturePolicy: "AND('zcy.peer')",
 	})
 	if err != nil {
 		panic(err)
@@ -441,7 +447,7 @@ func TestQueryCommittedForChannel(t *testing.T) {
 }
 
 func TestInvokeChainCode(t *testing.T) {
-	args := [][]byte{[]byte("ADD"), []byte("name"), []byte("jinjianfeng10")}
+	args := [][]byte{[]byte("ADD"), []byte("name"), []byte("jinjianfeng1")}
 	resp, err := GetPeersClient().InvokeChainCode("kfc", "scc", false, args)
 	if err != nil {
 		panic(err)
@@ -456,7 +462,7 @@ func TestInvokeChainCode(t *testing.T) {
 
 func TestQueryChainCode(t *testing.T) {
 	args := [][]byte{[]byte("GET"), []byte("name")}
-	resp, err := GetZcmPeerClient().QueryChainCode("kfc", "scc", false, args)
+	resp, err := GetZcyPeerClient().QueryChainCode("kfc", "scc", false, args)
 	if err != nil {
 		panic(err)
 	}
@@ -465,12 +471,30 @@ func TestQueryChainCode(t *testing.T) {
 
 func TestQueryChainCode2(t *testing.T) {
 	args := [][]byte{[]byte("HISTORY"), []byte("name")}
-	resp, err := GetZcmPeerClient().QueryChainCode("kfc", "scc", false, args)
+	resp, err := GetZcyPeerClient().QueryChainCode("kfc", "scc", false, args)
 	if err != nil {
 		panic(err)
 	}
 	fmt.Println(resp)
-	fmt.Println(string(resp.Payload))
+
+	var m []map[string]interface{}
+
+	err = json.Unmarshal(resp.Payload, &m)
+	if err != nil {
+		panic(err)
+	}
+
+	for _, o := range m {
+		v := o["value"].(string)
+		fmt.Println(v)
+
+		vv := o["valueo"].(string)
+		vvv, _ := base64.StdEncoding.DecodeString(vv)
+		var mm map[string]interface{}
+		_ = json.Unmarshal(vvv, &mm)
+		fmt.Println(mm)
+	}
+
 }
 
 func GetZcyPeerClient() *client.PeerClient {
@@ -512,15 +536,19 @@ func GetZcmPeerClient() *client.PeerClient {
 func GetPeersClient() *client.PeersClient {
 
 	zctAdminUser, _ := client.GetUser("admin", "zct", zctAdminCertificate, zctAdminPrivateKey)
+	zcyAdminUser, _ := client.GetUser("admin", "zcy", zcyAdminCertificate, zcyAdminPrivateKey)
+
+	fmt.Println(zctAdminUser)
+	fmt.Println(zcyAdminUser)
 
 	zctPeer := client.GetPeer("zct", "tls.zct.laziest.com", "tls.zct.laziest.com:9051", zctIntermediateCaCertificate)
 	zcyPeer := client.GetPeer("zcy", "tls.zcy.laziest.com", "tls.zcy.laziest.com:7051", zcyIntermediateCaCertificate)
-	zcmPeer := client.GetPeer("zcm", "tls.zcm.laziest.com", "tls.zcm.laziest.com:8051", zcmIntermediateCaCertificate)
+	//zcmPeer := client.GetPeer("zcm", "tls.zcm.laziest.com", "tls.zcm.laziest.com:8051", zcmIntermediateCaCertificate)
 
 	return &client.PeersClient{
-		Peers:   []*endpoints.Peer{zcyPeer, zctPeer, zcmPeer},
-		Signer:  zctAdminUser,
-		Orderer: *GetOrdererClientForZct(),
+		Peers:   []*endpoints.Peer{zcyPeer, zctPeer},
+		Signer:  zcyAdminUser,
+		Orderer: *GetOrdererClientForZcy(),
 	}
 }
 

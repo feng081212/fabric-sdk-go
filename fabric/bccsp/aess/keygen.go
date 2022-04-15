@@ -21,7 +21,7 @@ Please review third_party pinning scripts and patches for more details.
 package aess
 
 import (
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
 )
 

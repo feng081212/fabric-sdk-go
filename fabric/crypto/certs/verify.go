@@ -2,7 +2,7 @@ package certs
 
 import (
 	"crypto/x509"
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 	"github.com/pkg/errors"
 	"time"
 )

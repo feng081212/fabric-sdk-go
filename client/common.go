@@ -3,9 +3,9 @@ package client
 import (
 	"crypto/tls"
 	"encoding/hex"
-	"fabric-sdk-go/fabric/bccsp/hasher"
-	"fabric-sdk-go/fabric/endpoints"
-	"fabric-sdk-go/fabric/policies"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
+	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
+	"github.com/feng081212/fabric-sdk-go/fabric/policies"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/hyperledger/fabric-protos-go/common"

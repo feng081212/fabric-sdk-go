@@ -14,7 +14,7 @@ SPDX-License-Identifier: Apache-2.0
 package retry
 
 import (
-	status2 "fabric-sdk-go/fabric/errors/status"
+	status2 "github.com/feng081212/fabric-sdk-go/fabric/errors/status"
 	"time"
 )
 

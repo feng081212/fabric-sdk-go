@@ -10,7 +10,7 @@ import (
 	"archive/tar"
 	"bytes"
 	"compress/gzip"
-	"fabric-sdk-go/fabric/chaincode"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode"
 	"fmt"
 	"io"
 	"os"
@@ -18,7 +18,7 @@ import (
 	"strings"
 	"time"
 
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/pkg/errors"
 )

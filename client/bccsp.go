@@ -1,8 +1,8 @@
 package client
 
 import (
-	"fabric-sdk-go/fabric/bccsp"
-	"fabric-sdk-go/fabric/bccsp/factory"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/factory"
 )
 
 var defaultBCCSP bccsp.BCCSP

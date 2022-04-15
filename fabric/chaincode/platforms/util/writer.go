@@ -13,8 +13,8 @@ package util
 import (
 	"archive/tar"
 	"bufio"
-	flogging "fabric-sdk-go/common/logger"
-	"fabric-sdk-go/fabric/chaincode/ccmetadata"
+	flogging "github.com/feng081212/fabric-sdk-go/common/logger"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/ccmetadata"
 	"fmt"
 	"io"
 	"io/ioutil"

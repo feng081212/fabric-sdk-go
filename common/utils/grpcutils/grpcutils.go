@@ -2,7 +2,7 @@ package grpcutils
 
 import (
 	"context"
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 	"google.golang.org/grpc"
 )
 

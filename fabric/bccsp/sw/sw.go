@@ -1,7 +1,7 @@
 package sw
 
 import (
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 )
 
 var (

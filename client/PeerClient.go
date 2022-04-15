@@ -2,8 +2,8 @@ package client
 
 import (
 	"context"
-	logging "fabric-sdk-go/common/logger"
-	"fabric-sdk-go/fabric/endpoints"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
+	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/peer"

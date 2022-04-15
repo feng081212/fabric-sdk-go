@@ -23,7 +23,7 @@ package aess
 import (
 	"crypto/hmac"
 	"errors"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
 	"hash"
 )

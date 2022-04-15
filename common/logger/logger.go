@@ -13,9 +13,9 @@ SPDX-License-Identifier: Apache-2.0
 package logger
 
 import (
-	"fabric-sdk-go/common/logger/api"
-	"fabric-sdk-go/common/logger/metadata"
-	"fabric-sdk-go/common/logger/modlog"
+	"github.com/feng081212/fabric-sdk-go/common/logger/api"
+	"github.com/feng081212/fabric-sdk-go/common/logger/metadata"
+	"github.com/feng081212/fabric-sdk-go/common/logger/modlog"
 	"sync"
 )
 

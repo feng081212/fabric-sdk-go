@@ -1,9 +1,9 @@
 package client
 
 import (
-	"fabric-sdk-go/fabric/bccsp/hasher"
-	"fabric-sdk-go/fabric/bccsp/sw"
-	"fabric-sdk-go/fabric/crypto/certs"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/sw"
+	"github.com/feng081212/fabric-sdk-go/fabric/crypto/certs"
 	"fmt"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/msp"

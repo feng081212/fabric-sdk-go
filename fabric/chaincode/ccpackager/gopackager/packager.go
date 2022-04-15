@@ -10,14 +10,14 @@ import (
 	"archive/tar"
 	"bytes"
 	"compress/gzip"
-	"fabric-sdk-go/fabric/chaincode"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode"
 	"go/build"
 	"io"
 	"os"
 	"path/filepath"
 	"time"
 
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 	"github.com/pkg/errors"
 
 	"fmt"

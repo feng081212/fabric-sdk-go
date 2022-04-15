@@ -10,8 +10,8 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"errors"
-	"fabric-sdk-go/fabric/bccsp"
-	"fabric-sdk-go/fabric/bccsp/ecdsas"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/ecdsas"
 	"fmt"
 )
 

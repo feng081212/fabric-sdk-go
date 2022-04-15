@@ -1,7 +1,7 @@
 package client
 
 import (
-	"fabric-sdk-go/fabric/crypto/certs"
+	"github.com/feng081212/fabric-sdk-go/fabric/crypto/certs"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/orderer"
 	"github.com/hyperledger/fabric-protos-go/orderer/etcdraft"

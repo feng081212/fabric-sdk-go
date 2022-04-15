@@ -1,7 +1,7 @@
 package aess
 
 import (
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
 	"github.com/pkg/errors"
 )

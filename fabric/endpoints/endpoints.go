@@ -1,7 +1,7 @@
 package endpoints
 
 import (
-	logging "fabric-sdk-go/common/logger"
+	logging "github.com/feng081212/fabric-sdk-go/common/logger"
 )
 
 var logger = logging.NewLogger("fabsdk/endpoints")

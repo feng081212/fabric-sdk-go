@@ -11,10 +11,10 @@ Please review third_party pinning scripts and patches for more details.
 package platforms
 
 import (
-	"fabric-sdk-go/fabric/chaincode/platforms/external"
-	"fabric-sdk-go/fabric/chaincode/platforms/golang"
-	"fabric-sdk-go/fabric/chaincode/platforms/java"
-	"fabric-sdk-go/fabric/chaincode/platforms/node"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/external"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/golang"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/java"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/node"
 )
 
 // Platform Interface for validating the specification and writing the package for

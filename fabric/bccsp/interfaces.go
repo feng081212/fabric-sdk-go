@@ -12,7 +12,7 @@ package bccsp
 
 import (
 	"crypto"
-	"fabric-sdk-go/fabric/bccsp/hasher"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/hasher"
 	"hash"
 )
 

@@ -22,7 +22,7 @@ package aess
 import (
 	"crypto/sha256"
 	"errors"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 func NewAesPrivateKey(privKey []byte, exportable bool) *AesPrivateKey {

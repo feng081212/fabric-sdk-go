@@ -1,8 +1,8 @@
 package factory
 
 import (
-	"fabric-sdk-go/fabric/bccsp"
-	"fabric-sdk-go/fabric/bccsp/sw"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/sw"
 	"github.com/pkg/errors"
 )
 

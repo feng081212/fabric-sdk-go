@@ -22,7 +22,7 @@ package ecdsas
 import (
 	"crypto/ecdsa"
 	"crypto/rand"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 type EcdsaSigner struct{}

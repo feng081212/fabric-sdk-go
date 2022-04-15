@@ -26,7 +26,7 @@ import (
 	"crypto/cipher"
 	"crypto/rand"
 	"errors"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 	"fmt"
 	"io"
 )

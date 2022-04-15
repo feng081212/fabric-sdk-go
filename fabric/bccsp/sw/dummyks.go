@@ -21,7 +21,7 @@ package sw
 
 import (
 	"errors"
-	"fabric-sdk-go/fabric/bccsp"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp"
 )
 
 // NewDummyKeyStore instantiate a dummy key store

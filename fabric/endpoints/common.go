@@ -1,7 +1,7 @@
 package endpoints
 
 import (
-	status2 "fabric-sdk-go/fabric/errors/status"
+	status2 "github.com/feng081212/fabric-sdk-go/fabric/errors/status"
 	"fmt"
 )
 

@@ -15,7 +15,7 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/json"
-	"fabric-sdk-go/fabric/chaincode/platforms/util"
+	"github.com/feng081212/fabric-sdk-go/fabric/chaincode/platforms/util"
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/pkg/errors"
 	"os"

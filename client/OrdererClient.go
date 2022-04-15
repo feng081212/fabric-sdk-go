@@ -2,7 +2,7 @@ package client
 
 import (
 	"context"
-	"fabric-sdk-go/fabric/endpoints"
+	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
 	"fmt"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"

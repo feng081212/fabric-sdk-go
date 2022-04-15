@@ -2,10 +2,10 @@ package client
 
 import (
 	"crypto/ecdsa"
-	"fabric-sdk-go/fabric/bccsp/ecdsas"
-	"fabric-sdk-go/fabric/bccsp/factory"
-	"fabric-sdk-go/fabric/crypto/certs"
-	"fabric-sdk-go/fabric/endpoints"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/ecdsas"
+	"github.com/feng081212/fabric-sdk-go/fabric/bccsp/factory"
+	"github.com/feng081212/fabric-sdk-go/fabric/crypto/certs"
+	"github.com/feng081212/fabric-sdk-go/fabric/endpoints"
 	"github.com/hyperledger/fabric-protos-go/common"
 )
 
